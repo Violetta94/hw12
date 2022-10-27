@@ -1,6 +1,6 @@
 public class Author {
-    String nameAuthor;
-    String familiAuthor;
+    private String nameAuthor;
+   private String familiAuthor;
 
     public Author (String nameAuthor, String familiAuthor) {
         this.nameAuthor = nameAuthor;

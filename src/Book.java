@@ -1,6 +1,6 @@
 public class Book {
 
-    String namePublishing;
+   private String namePublishing;
     private Author author;
    private int yearPublishing;
 
