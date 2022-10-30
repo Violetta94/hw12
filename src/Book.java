@@ -6,8 +6,6 @@ public class Book {
     private Author author;
     private int yearPublishing;
 
-    private int id;
-
     public Book(String namePublishing, Author author, int yearPublishing) {
         this.namePublishing = namePublishing;
         this.author = author;
@@ -26,21 +24,19 @@ public class Book {
     public void setYearPublishing(int yearPublishing) {
         this.yearPublishing = yearPublishing;
     }
-    private Book (int id) {
-        this.id = id;
-    }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return yearPublishing == book.yearPublishing && id == book.id && Objects.equals(namePublishing, book.namePublishing) && Objects.equals(author, book.author);
+        return yearPublishing == book.yearPublishing && Objects.equals(namePublishing, book.namePublishing) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(id);
+        return java.util.Objects.hash(namePublishing, author, yearPublishing);
     }
 
     public String toString() {
