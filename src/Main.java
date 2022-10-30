@@ -8,8 +8,7 @@ public class Main {
         System.out.println(book1.getNamePublishing()+" "+author1.getNameAuthor()+" "+author1.getFamiliAuthor()+" "+book1.getYearPublishing());
         System.out.println(book2.getNamePublishing()+" "+author2.getNameAuthor()+" "+author2.getFamiliAuthor()+" "+book2.getYearPublishing());
         book1.setYearPublishing(1865);
-        System.out.println(book1.getNamePublishing()+" "+author1.getNameAuthor()+" "+author1.getFamiliAuthor()+" "+book1.getYearPublishing());
-
-
+        System.out.println(book1);
+        System.out.println(book1.equals(book2));
     }
 }
