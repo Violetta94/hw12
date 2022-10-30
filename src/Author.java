@@ -4,8 +4,6 @@ public class Author {
     private String nameAuthor;
     private String familiAuthor;
 
-    private int id;
-
     public Author(String nameAuthor, String familiAuthor) {
         this.nameAuthor = nameAuthor;
         this.familiAuthor = familiAuthor;
@@ -23,9 +21,6 @@ public class Author {
         return "автор:" + this.nameAuthor + " " + this.familiAuthor;
     }
 
-    private Author (int id) {
-        this.id = id;
-    }
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -35,6 +30,6 @@ public class Author {
 
     @Override
         public int hashCode() {
-            return java.util.Objects.hash(id);
+            return java.util.Objects.hash(nameAuthor, familiAuthor);
         }
 }
