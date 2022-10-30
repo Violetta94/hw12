@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Book {
 
@@ -28,12 +29,13 @@ public class Book {
     private Book (int id) {
         this.id = id;
     }
-    public boolean equals(Object other) {
-        Book getYearPublishing = (Book) other;
-        if (this.id != getYearPublishing.id) {
-            return false;
-        }
-        return this.id == getYearPublishing.id;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublishing == book.yearPublishing && id == book.id && Objects.equals(namePublishing, book.namePublishing) && Objects.equals(author, book.author);
     }
 
     @Override

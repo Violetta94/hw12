@@ -26,12 +26,11 @@ public class Author {
     private Author (int id) {
         this.id = id;
     }
-    public boolean equals(Object other) {
-        Author getNameAutor = (Author) other;
-        if (this.id != getNameAutor.id) {
-            return false;
-        }
-        return this.id == getNameAutor.id;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return nameAuthor.equals(author.nameAuthor) && familiAuthor.equals(author.familiAuthor);
     }
 
     @Override
